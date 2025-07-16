@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "수익성 높은 암호화폐 거래소",
+  "hero": {
+    "title": "암호화폐를 +15% 수익으로 교환하세요",
+    "description": "최고 환율의 P2P 거래소. 최소 금액 10 USDT부터. 보안 보장과 즉시 송금.",
+    "exchangeNow": "지금 교환하기"
+  },
+  "exchangeForm": {
+    "title": "암호화폐 교환",
+    "youSend": "보내는 금액",
+    "youGet": "받는 금액",
+    "exchangeRate": "환율",
+    "yourProfit": "당신의 수익",
+    "commission": "수수료",
+    "minAmount": "최소 교환 금액: 10 USDT",
+    "walletAddress": "지갑 주소",
+    "sendToAdmin": "관리자에게 보내기"
+  },
+  "rates": {
+    "title": "실시간 암호화폐 환율",
+    "online": "온라인"
+  },
+  "recentExchanges": {
+    "title": "최근 교환",
+    "minutesAgo": "분 전",
+    "hoursAgo": "시간 전"
+  },
+  "testimonials": {
+    "title": "고객 리뷰",
+    "today": "오늘",
+    "yesterday": "어제",
+    "verified": "검증됨"
+  },
+  "referralProgram": {
+    "title": "추천 프로그램",
+    "bringFriends": "친구 초대",
+    "earn25": "25% 수익",
+    "noLimits": "제한 없음",
+    "getReferralLink": "추천 링크 받기"
+  },
+  "footer": {
+    "services": "서비스",
+    "support": "지원",
+    "security": "보안",
+    "rights": "모든 권리 보유"
+  },
+  "notifications": {
+    "exchangeSuccess": "교환이 성공적으로 완료되었습니다!",
+    "exchangeError": "교환에 실패했습니다. 다시 시도해주세요.",
+    "copying": "클립보드에 복사됨",
+    "adminNotified": "관리자에게 교환 알림이 전송되었습니다"
+  }
+}

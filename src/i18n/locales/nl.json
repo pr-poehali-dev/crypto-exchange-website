@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "Winstgevende cryptocurrency exchange",
+  "hero": {
+    "title": "Wissel cryptocurrencies met +15% winst",
+    "description": "P2P uitwisseling met de beste tarieven. Minimumbedrag vanaf 10 USDT. Gegarandeerde veiligheid en directe overmakingen.",
+    "exchangeNow": "Nu wisselen"
+  },
+  "exchangeForm": {
+    "title": "Cryptocurrency uitwisseling",
+    "youSend": "Je stuurt",
+    "youGet": "Je krijgt",
+    "exchangeRate": "Wisselkoers",
+    "yourProfit": "Jouw winst",
+    "commission": "Commissie",
+    "minAmount": "Minimum uitwisselingsbedrag: 10 USDT",
+    "walletAddress": "Wallet adres",
+    "sendToAdmin": "Verstuur naar beheerder"
+  },
+  "rates": {
+    "title": "Real-time cryptocurrency tarieven",
+    "online": "Online"
+  },
+  "recentExchanges": {
+    "title": "Recente uitwisselingen",
+    "minutesAgo": "minuten geleden",
+    "hoursAgo": "uren geleden"
+  },
+  "testimonials": {
+    "title": "Klantbeoordelingen",
+    "today": "Vandaag",
+    "yesterday": "Gisteren",
+    "verified": "Geverifieerd"
+  },
+  "referralProgram": {
+    "title": "Verwijzingsprogramma",
+    "bringFriends": "Breng vrienden mee",
+    "earn25": "Verdien 25%",
+    "noLimits": "Geen limieten",
+    "getReferralLink": "Verwijzingslink verkrijgen"
+  },
+  "footer": {
+    "services": "Diensten",
+    "support": "Ondersteuning",
+    "security": "Veiligheid",
+    "rights": "Alle rechten voorbehouden"
+  },
+  "notifications": {
+    "exchangeSuccess": "Uitwisseling succesvol voltooid!",
+    "exchangeError": "Uitwisseling mislukt. Probeer opnieuw.",
+    "copying": "Gekopieerd naar klembord",
+    "adminNotified": "Beheerder geïnformeerd over jouw uitwisseling"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "Troca de criptomoedas lucrativa",
+  "hero": {
+    "title": "Troque criptomoedas com +15% de lucro",
+    "description": "Troca P2P com as melhores taxas. Valor mínimo a partir de 10 USDT. Segurança garantida e transferências instantâneas.",
+    "exchangeNow": "Trocar agora"
+  },
+  "exchangeForm": {
+    "title": "Troca de criptomoedas",
+    "youSend": "Você envia",
+    "youGet": "Você recebe",
+    "exchangeRate": "Taxa de câmbio",
+    "yourProfit": "Seu lucro",
+    "commission": "Comissão",
+    "minAmount": "Valor mínimo de troca: 10 USDT",
+    "walletAddress": "Endereço da carteira",
+    "sendToAdmin": "Enviar para administrador"
+  },
+  "rates": {
+    "title": "Taxas de criptomoedas em tempo real",
+    "online": "Online"
+  },
+  "recentExchanges": {
+    "title": "Trocas recentes",
+    "minutesAgo": "minutos atrás",
+    "hoursAgo": "horas atrás"
+  },
+  "testimonials": {
+    "title": "Avaliações de clientes",
+    "today": "Hoje",
+    "yesterday": "Ontem",
+    "verified": "Verificado"
+  },
+  "referralProgram": {
+    "title": "Programa de indicação",
+    "bringFriends": "Traga amigos",
+    "earn25": "Ganhe 25%",
+    "noLimits": "Sem limites",
+    "getReferralLink": "Obter link de indicação"
+  },
+  "footer": {
+    "services": "Serviços",
+    "support": "Suporte",
+    "security": "Segurança",
+    "rights": "Todos os direitos reservados"
+  },
+  "notifications": {
+    "exchangeSuccess": "Troca concluída com sucesso!",
+    "exchangeError": "Troca falhou. Tente novamente.",
+    "copying": "Copiado para área de transferência",
+    "adminNotified": "Administrador notificado sobre sua troca"
+  }
+}

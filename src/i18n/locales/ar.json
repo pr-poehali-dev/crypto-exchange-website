@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "بورصة العملات المشفرة المربحة",
+  "hero": {
+    "title": "تبادل العملات المشفرة بربح +15%",
+    "description": "تبادل P2P بأفضل الأسعار. الحد الأدنى من 10 USDT. أمان مضمون وتحويلات فورية.",
+    "exchangeNow": "تبادل الآن"
+  },
+  "exchangeForm": {
+    "title": "تبادل العملات المشفرة",
+    "youSend": "ترسل",
+    "youGet": "تحصل على",
+    "exchangeRate": "سعر الصرف",
+    "yourProfit": "ربحك",
+    "commission": "العمولة",
+    "minAmount": "الحد الأدنى للتبادل: 10 USDT",
+    "walletAddress": "عنوان المحفظة",
+    "sendToAdmin": "إرسال للمدير"
+  },
+  "rates": {
+    "title": "أسعار العملات المشفرة في الوقت الفعلي",
+    "online": "متصل"
+  },
+  "recentExchanges": {
+    "title": "التبادلات الأخيرة",
+    "minutesAgo": "دقائق مضت",
+    "hoursAgo": "ساعات مضت"
+  },
+  "testimonials": {
+    "title": "آراء العملاء",
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "verified": "موثق"
+  },
+  "referralProgram": {
+    "title": "برنامج الإحالة",
+    "bringFriends": "اجلب الأصدقاء",
+    "earn25": "اكسب 25%",
+    "noLimits": "بلا حدود",
+    "getReferralLink": "احصل على رابط الإحالة"
+  },
+  "footer": {
+    "services": "الخدمات",
+    "support": "الدعم",
+    "security": "الأمان",
+    "rights": "جميع الحقوق محفوظة"
+  },
+  "notifications": {
+    "exchangeSuccess": "تم التبادل بنجاح!",
+    "exchangeError": "فشل التبادل. يرجى المحاولة مرة أخرى.",
+    "copying": "تم النسخ إلى الحافظة",
+    "adminNotified": "تم إشعار المدير بتبادلك"
+  }
+}

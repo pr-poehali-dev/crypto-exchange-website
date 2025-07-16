@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "Profitabler Kryptowährungsaustausch",
+  "hero": {
+    "title": "Tauschen Sie Kryptowährungen mit +15% Gewinn",
+    "description": "P2P-Austausch mit den besten Kursen. Mindestbetrag ab 10 USDT. Garantierte Sicherheit und sofortige Überweisungen.",
+    "exchangeNow": "Jetzt tauschen"
+  },
+  "exchangeForm": {
+    "title": "Kryptowährungsaustausch",
+    "youSend": "Sie senden",
+    "youGet": "Sie erhalten",
+    "exchangeRate": "Wechselkurs",
+    "yourProfit": "Ihr Gewinn",
+    "commission": "Provision",
+    "minAmount": "Mindestaustauschmenge: 10 USDT",
+    "walletAddress": "Wallet-Adresse",
+    "sendToAdmin": "An Administrator senden"
+  },
+  "rates": {
+    "title": "Kryptowährungskurse in Echtzeit",
+    "online": "Online"
+  },
+  "recentExchanges": {
+    "title": "Kürzliche Austausche",
+    "minutesAgo": "Minuten zuvor",
+    "hoursAgo": "Stunden zuvor"
+  },
+  "testimonials": {
+    "title": "Kundenbewertungen",
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "verified": "Verifiziert"
+  },
+  "referralProgram": {
+    "title": "Empfehlungsprogramm",
+    "bringFriends": "Freunde mitbringen",
+    "earn25": "25% verdienen",
+    "noLimits": "Keine Limits",
+    "getReferralLink": "Empfehlungslink erhalten"
+  },
+  "footer": {
+    "services": "Dienstleistungen",
+    "support": "Support",
+    "security": "Sicherheit",
+    "rights": "Alle Rechte vorbehalten"
+  },
+  "notifications": {
+    "exchangeSuccess": "Austausch erfolgreich abgeschlossen!",
+    "exchangeError": "Austausch fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "copying": "In die Zwischenablage kopiert",
+    "adminNotified": "Administrator über Ihren Austausch benachrichtigt"
+  }
+}

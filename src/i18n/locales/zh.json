@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "盈利的加密货币交易所",
+  "hero": {
+    "title": "交换加密货币获得+15%利润",
+    "description": "P2P交换，汇率最优。最低金额10 USDT起。保证安全，即时转账。",
+    "exchangeNow": "立即交换"
+  },
+  "exchangeForm": {
+    "title": "加密货币交换",
+    "youSend": "您发送",
+    "youGet": "您获得",
+    "exchangeRate": "汇率",
+    "yourProfit": "您的利润",
+    "commission": "手续费",
+    "minAmount": "最低交换金额：10 USDT",
+    "walletAddress": "钱包地址",
+    "sendToAdmin": "发送给管理员"
+  },
+  "rates": {
+    "title": "实时加密货币汇率",
+    "online": "在线"
+  },
+  "recentExchanges": {
+    "title": "最近交换",
+    "minutesAgo": "分钟前",
+    "hoursAgo": "小时前"
+  },
+  "testimonials": {
+    "title": "客户评价",
+    "today": "今天",
+    "yesterday": "昨天",
+    "verified": "已验证"
+  },
+  "referralProgram": {
+    "title": "推荐计划",
+    "bringFriends": "带来朋友",
+    "earn25": "赚取25%",
+    "noLimits": "无限制",
+    "getReferralLink": "获取推荐链接"
+  },
+  "footer": {
+    "services": "服务",
+    "support": "支持",
+    "security": "安全",
+    "rights": "版权所有"
+  },
+  "notifications": {
+    "exchangeSuccess": "交换成功完成！",
+    "exchangeError": "交换失败。请重试。",
+    "copying": "已复制到剪贴板",
+    "adminNotified": "管理员已收到您的交换通知"
+  }
+}

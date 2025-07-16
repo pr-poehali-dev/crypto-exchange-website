@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "Karlı kripto para borsası",
+  "hero": {
+    "title": "Kripto paraları +%15 kârla değiştirin",
+    "description": "En iyi oranlarla P2P değişim. 10 USDT'den başlayan minimum tutar. Garantili güvenlik ve anında transferler.",
+    "exchangeNow": "Şimdi değiştir"
+  },
+  "exchangeForm": {
+    "title": "Kripto para değişimi",
+    "youSend": "Gönderdiğiniz",
+    "youGet": "Aldığınız",
+    "exchangeRate": "Döviz kuru",
+    "yourProfit": "Kârınız",
+    "commission": "Komisyon",
+    "minAmount": "Minimum değişim tutarı: 10 USDT",
+    "walletAddress": "Cüzdan adresi",
+    "sendToAdmin": "Yöneticiye gönder"
+  },
+  "rates": {
+    "title": "Gerçek zamanlı kripto para oranları",
+    "online": "Çevrimiçi"
+  },
+  "recentExchanges": {
+    "title": "Son değişimler",
+    "minutesAgo": "dakika önce",
+    "hoursAgo": "saat önce"
+  },
+  "testimonials": {
+    "title": "Müşteri yorumları",
+    "today": "Bugün",
+    "yesterday": "Dün",
+    "verified": "Doğrulanmış"
+  },
+  "referralProgram": {
+    "title": "Referans programı",
+    "bringFriends": "Arkadaş getir",
+    "earn25": "%25 kazan",
+    "noLimits": "Limit yok",
+    "getReferralLink": "Referans linkini al"
+  },
+  "footer": {
+    "services": "Hizmetler",
+    "support": "Destek",
+    "security": "Güvenlik",
+    "rights": "Tüm hakları saklıdır"
+  },
+  "notifications": {
+    "exchangeSuccess": "Değişim başarıyla tamamlandı!",
+    "exchangeError": "Değişim başarısız. Lütfen tekrar deneyin.",
+    "copying": "Panoya kopyalandı",
+    "adminNotified": "Yönetici değişiminiz hakkında bilgilendirildi"
+  }
+}

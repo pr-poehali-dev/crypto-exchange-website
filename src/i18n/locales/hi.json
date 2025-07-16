@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "लाभकारी क्रिप्टोकरेंसी एक्सचेंज",
+  "hero": {
+    "title": "क्रिप्टोकरेंसी को +15% लाभ के साथ एक्सचेंज करें",
+    "description": "सबसे अच्छी दरों के साथ P2P एक्सचेंज। न्यूनतम राशि 10 USDT से। गारंटीशुदा सुरक्षा और तुरंत ट्रांसफर।",
+    "exchangeNow": "अभी एक्सचेंज करें"
+  },
+  "exchangeForm": {
+    "title": "क्रिप्टोकरेंसी एक्सचेंज",
+    "youSend": "आप भेजते हैं",
+    "youGet": "आप पाते हैं",
+    "exchangeRate": "एक्सचेंज दर",
+    "yourProfit": "आपका लाभ",
+    "commission": "कमीशन",
+    "minAmount": "न्यूनतम एक्सचेंज राशि: 10 USDT",
+    "walletAddress": "वॉलेट पता",
+    "sendToAdmin": "एडमिन को भेजें"
+  },
+  "rates": {
+    "title": "वास्तविक समय क्रिप्टोकरेंसी दरें",
+    "online": "ऑनलाइन"
+  },
+  "recentExchanges": {
+    "title": "हाल के एक्सचेंज",
+    "minutesAgo": "मिनट पहले",
+    "hoursAgo": "घंटे पहले"
+  },
+  "testimonials": {
+    "title": "ग्राहक समीक्षाएं",
+    "today": "आज",
+    "yesterday": "कल",
+    "verified": "सत्यापित"
+  },
+  "referralProgram": {
+    "title": "रेफरल प्रोग्राम",
+    "bringFriends": "दोस्तों को लाएं",
+    "earn25": "25% कमाएं",
+    "noLimits": "कोई सीमा नहीं",
+    "getReferralLink": "रेफरल लिंक प्राप्त करें"
+  },
+  "footer": {
+    "services": "सेवाएं",
+    "support": "सपोर्ट",
+    "security": "सुरक्षा",
+    "rights": "सभी अधिकार सुरक्षित"
+  },
+  "notifications": {
+    "exchangeSuccess": "एक्सचेंज सफलतापूर्वक पूरा हुआ!",
+    "exchangeError": "एक्सचेंज असफल। कृपया फिर से कोशिश करें।",
+    "copying": "क्लिपबोर्ड में कॉपी किया गया",
+    "adminNotified": "एडमिन को आपके एक्सचेंज के बारे में सूचित किया गया"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "収益性の高い暗号通貨取引所",
+  "hero": {
+    "title": "暗号通貨を+15%の利益で交換",
+    "description": "最高レートのP2P取引所。最低金額10 USDTから。セキュリティ保証と即時送金。",
+    "exchangeNow": "今すぐ交換"
+  },
+  "exchangeForm": {
+    "title": "暗号通貨交換",
+    "youSend": "送金額",
+    "youGet": "受取額",
+    "exchangeRate": "交換レート",
+    "yourProfit": "あなたの利益",
+    "commission": "手数料",
+    "minAmount": "最低交換金額：10 USDT",
+    "walletAddress": "ウォレットアドレス",
+    "sendToAdmin": "管理者に送信"
+  },
+  "rates": {
+    "title": "リアルタイム暗号通貨レート",
+    "online": "オンライン"
+  },
+  "recentExchanges": {
+    "title": "最近の交換",
+    "minutesAgo": "分前",
+    "hoursAgo": "時間前"
+  },
+  "testimonials": {
+    "title": "お客様のレビュー",
+    "today": "今日",
+    "yesterday": "昨日",
+    "verified": "検証済み"
+  },
+  "referralProgram": {
+    "title": "紹介プログラム",
+    "bringFriends": "友達を招待",
+    "earn25": "25%獲得",
+    "noLimits": "制限なし",
+    "getReferralLink": "紹介リンクを取得"
+  },
+  "footer": {
+    "services": "サービス",
+    "support": "サポート",
+    "security": "セキュリティ",
+    "rights": "全著作権所有"
+  },
+  "notifications": {
+    "exchangeSuccess": "交換が正常に完了しました！",
+    "exchangeError": "交換に失敗しました。再試行してください。",
+    "copying": "クリップボードにコピーしました",
+    "adminNotified": "管理者にあなたの交換について通知しました"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "Profitable cryptocurrency exchange",
+  "hero": {
+    "title": "Exchange cryptocurrencies with +15% profit",
+    "description": "P2P exchange with the best rates. Minimum amount from 10 USDT. Guaranteed security and instant transfers.",
+    "exchangeNow": "Exchange Now"
+  },
+  "exchangeForm": {
+    "title": "Cryptocurrency Exchange",
+    "youSend": "You Send",
+    "youGet": "You Get",
+    "exchangeRate": "Exchange Rate",
+    "yourProfit": "Your Profit",
+    "commission": "Commission",
+    "minAmount": "Minimum exchange amount: 10 USDT",
+    "walletAddress": "Wallet Address",
+    "sendToAdmin": "Send to Admin"
+  },
+  "rates": {
+    "title": "Real-time cryptocurrency rates",
+    "online": "Online"
+  },
+  "recentExchanges": {
+    "title": "Recent Exchanges",
+    "minutesAgo": "minutes ago",
+    "hoursAgo": "hours ago"
+  },
+  "testimonials": {
+    "title": "Customer Reviews",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "verified": "Verified"
+  },
+  "referralProgram": {
+    "title": "Referral Program",
+    "bringFriends": "Bring Friends",
+    "earn25": "Earn 25%",
+    "noLimits": "No Limits",
+    "getReferralLink": "Get Referral Link"
+  },
+  "footer": {
+    "services": "Services",
+    "support": "Support",
+    "security": "Security",
+    "rights": "All rights reserved"
+  },
+  "notifications": {
+    "exchangeSuccess": "Exchange completed successfully!",
+    "exchangeError": "Exchange failed. Please try again.",
+    "copying": "Copied to clipboard",
+    "adminNotified": "Administrator notified about your exchange"
+  },
+  "specialOffer": {
+    "title": "Special Offer",
+    "subtitle": "For exchanges over 10,000 USDT",
+    "profit19": "Guaranteed +19% profit",
+    "oncePerMonth": "Once per month"
+  },
+  "languages": {
+    "en": "English",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "Dochodowa giełda kryptowalut",
+  "hero": {
+    "title": "Wymieniaj kryptowaluty z +15% zyskiem",
+    "description": "Wymiana P2P z najlepszymi kursami. Minimalna kwota od 10 USDT. Gwarantowane bezpieczeństwo i natychmiastowe przelewy.",
+    "exchangeNow": "Wymień teraz"
+  },
+  "exchangeForm": {
+    "title": "Wymiana kryptowalut",
+    "youSend": "Wysyłasz",
+    "youGet": "Otrzymujesz",
+    "exchangeRate": "Kurs wymiany",
+    "yourProfit": "Twój zysk",
+    "commission": "Prowizja",
+    "minAmount": "Minimalna kwota wymiany: 10 USDT",
+    "walletAddress": "Adres portfela",
+    "sendToAdmin": "Wyślij do administratora"
+  },
+  "rates": {
+    "title": "Kursy kryptowalut w czasie rzeczywistym",
+    "online": "Online"
+  },
+  "recentExchanges": {
+    "title": "Ostatnie wymiany",
+    "minutesAgo": "minut temu",
+    "hoursAgo": "godzin temu"
+  },
+  "testimonials": {
+    "title": "Opinie klientów",
+    "today": "Dzisiaj",
+    "yesterday": "Wczoraj",
+    "verified": "Zweryfikowane"
+  },
+  "referralProgram": {
+    "title": "Program poleceń",
+    "bringFriends": "Przyprowadź znajomych",
+    "earn25": "Zarabiaj 25%",
+    "noLimits": "Bez limitów",
+    "getReferralLink": "Pobierz link polecający"
+  },
+  "footer": {
+    "services": "Usługi",
+    "support": "Wsparcie",
+    "security": "Bezpieczeństwo",
+    "rights": "Wszelkie prawa zastrzeżone"
+  },
+  "notifications": {
+    "exchangeSuccess": "Wymiana zakończona pomyślnie!",
+    "exchangeError": "Wymiana nieudana. Spróbuj ponownie.",
+    "copying": "Skopiowano do schowka",
+    "adminNotified": "Administrator został powiadomiony o twojej wymianie"
+  }
+}

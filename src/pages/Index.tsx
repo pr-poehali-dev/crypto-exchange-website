@@ -1,73 +1,63 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
+import LanguageSelector from '@/components/LanguageSelector';
+import ExchangeForm from '@/components/ExchangeForm';
+import LiveExchanges from '@/components/LiveExchanges';
+import { getCryptoPrices, CryptoPrice } from '@/services/cryptoAPI';
+import { format } from 'date-fns';
 
 const Index = () => {
-  const [fromCurrency, setFromCurrency] = useState('BTC');
-  const [toCurrency, setToCurrency] = useState('USDT');
-  const [amount, setAmount] = useState('');
-  const [exchangeRate, setExchangeRate] = useState(68500);
+  const { t } = useTranslation();
+  const [cryptoPrices, setCryptoPrices] = useState<CryptoPrice[]>([]);
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-      // Симуляция обновления курса
-      setExchangeRate(prev => prev + (Math.random() - 0.5) * 100);
-    }, 3000);
+    }, 1000);
     return () => clearInterval(timer);
   }, []);
 
-  const cryptoCurrencies = [
-    { code: 'BTC', name: 'Bitcoin', rate: 68500, change: '+2.5%' },
-    { code: 'ETH', name: 'Ethereum', rate: 3800, change: '+1.2%' },
-    { code: 'USDT', name: 'Tether', rate: 1, change: '0.0%' },
-    { code: 'BNB', name: 'Binance Coin', rate: 580, change: '+3.1%' },
-    { code: 'XRP', name: 'Ripple', rate: 0.65, change: '+0.8%' },
-    { code: 'ADA', name: 'Cardano', rate: 1.25, change: '+1.5%' },
-  ];
+  useEffect(() => {
+    const fetchPrices = async () => {
+      const prices = await getCryptoPrices();
+      setCryptoPrices(prices);
+    };
 
-  const recentExchanges = [
-    { user: 'Alex***', from: 'BTC', to: 'USDT', amount: '0.5', time: '2 мин назад' },
-    { user: 'Maria***', from: 'ETH', to: 'BTC', amount: '2.1', time: '5 мин назад' },
-    { user: 'John***', from: 'USDT', to: 'BNB', amount: '1500', time: '8 мин назад' },
-    { user: 'Anna***', from: 'BTC', to: 'USDT', amount: '0.8', time: '12 мин назад' },
-  ];
+    fetchPrices();
+    const interval = setInterval(fetchPrices, 30000); // Update every 30 seconds
+    
+    return () => clearInterval(interval);
+  }, []);
 
   const testimonials = [
     {
-      name: 'Алексей К.',
+      name: 'Alex K.',
       rating: 5,
-      text: 'Отличный курс! Обменял 2 BTC на USDT с выгодой 15%. Быстро и безопасно.',
-      date: 'Сегодня, 14:30',
+      text: 'Excellent rate! Exchanged 2 BTC to USDT with 15% profit. Fast and secure.',
+      date: t('testimonials.today') + ', 14:30',
       verified: true
     },
     {
-      name: 'Мария П.',
+      name: 'Maria P.',
       rating: 5,
-      text: 'Пользуюсь уже месяц. Реферальная программа просто супер! Заработал 500$ на рефералах.',
-      date: 'Вчера, 18:45',
+      text: 'Using for a month now. Referral program is amazing! Earned $500 from referrals.',
+      date: t('testimonials.yesterday') + ', 18:45',
       verified: true
     },
     {
-      name: 'Дмитрий С.',
+      name: 'John S.',
       rating: 5,
-      text: 'Обменял 15000 USDT с гарантированной выгодой 19%. Рекомендую всем!',
-      date: 'Сегодня, 11:22',
+      text: 'Exchanged 15000 USDT with guaranteed 19% profit. Highly recommend!',
+      date: t('testimonials.today') + ', 11:22',
       verified: true
     }
   ];
-
-  const calculateOutput = () => {
-    if (!amount || isNaN(parseFloat(amount))) return '0.00';
-    const rate = fromCurrency === 'BTC' ? exchangeRate * 1.15 : exchangeRate;
-    return (parseFloat(amount) * rate).toFixed(2);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -77,22 +67,27 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img 
-                src="/img/f03b2d5c-b144-47fb-8dee-85d65f57a3a0.jpg" 
-                alt="CryptoExchange" 
-                className="h-10 w-10 rounded-full"
+                src="/img/c53935cb-33ec-4c91-86de-de1d0ef36c53.jpg" 
+                alt="CryptoExchange Pro" 
+                className="h-12 w-12 rounded-full border-2 border-purple-400"
               />
               <div>
-                <h1 className="text-2xl font-bold text-white">CryptoExchange</h1>
-                <p className="text-sm text-gray-400">Выгодный обмен криптовалют</p>
+                <h1 className="text-2xl font-bold text-white">{t('title')}</h1>
+                <p className="text-sm text-gray-400">{t('subtitle')}</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <Badge variant="secondary" className="bg-green-900/30 text-green-400">
                 <Icon name="Zap" size={14} className="mr-1" />
-                Онлайн
+                {t('rates.online')}
               </Badge>
-              <Button variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500/10">
-                Поддержка 24/7
+              <div className="text-sm text-gray-400 hidden sm:block">
+                {format(currentTime, 'HH:mm:ss')}
+              </div>
+              <LanguageSelector />
+              <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-500/10">
+                <Icon name="MessageCircle" size={16} className="mr-2" />
+                24/7 Support
               </Button>
             </div>
           </div>
@@ -103,134 +98,44 @@ const Index = () => {
       <section className="relative py-20 px-4">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: 'url(/img/9faa5fcf-2336-4906-990b-d10940daa243.jpg)' }}
+          style={{ backgroundImage: 'url(/img/8c9dac1c-aac5-415d-ac85-fd6032646436.jpg)' }}
         />
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-white mb-4">
-              Обменивайте криптовалюты
-              <span className="text-orange-400"> с выгодой +15%</span>
+              {t('hero.title')}
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              P2P обменник с лучшими курсами. Минимальная сумма от 10 USDT. 
-              Гарантированная безопасность и мгновенные переводы.
+              {t('hero.description')}
             </p>
           </div>
 
-          {/* Exchange Form */}
-          <Card className="max-w-2xl mx-auto bg-gray-800/50 border-gray-700 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-white flex items-center">
-                <Icon name="ArrowLeftRight" size={24} className="mr-2 text-orange-400" />
-                Обменник криптовалют
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-300">Отдаете</label>
-                  <div className="flex space-x-2">
-                    <Input
-                      type="number"
-                      placeholder="0.00"
-                      value={amount}
-                      onChange={(e) => setAmount(e.target.value)}
-                      className="bg-gray-700 border-gray-600 text-white"
-                    />
-                    <Select value={fromCurrency} onValueChange={setFromCurrency}>
-                      <SelectTrigger className="w-32 bg-gray-700 border-gray-600 text-white">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {cryptoCurrencies.map(crypto => (
-                          <SelectItem key={crypto.code} value={crypto.code}>
-                            {crypto.code}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-300">Получаете</label>
-                  <div className="flex space-x-2">
-                    <Input
-                      type="text"
-                      value={calculateOutput()}
-                      readOnly
-                      className="bg-gray-700 border-gray-600 text-white"
-                    />
-                    <Select value={toCurrency} onValueChange={setToCurrency}>
-                      <SelectTrigger className="w-32 bg-gray-700 border-gray-600 text-white">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {cryptoCurrencies.map(crypto => (
-                          <SelectItem key={crypto.code} value={crypto.code}>
-                            {crypto.code}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-700/30 rounded-lg p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-300">Курс обмена:</span>
-                  <span className="text-orange-400 font-bold">
-                    1 {fromCurrency} = {exchangeRate.toFixed(2)} {toCurrency}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-300">Ваша выгода:</span>
-                  <span className="text-green-400 font-bold">+15%</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Комиссия:</span>
-                  <span className="text-green-400 font-bold">0%</span>
-                </div>
-              </div>
-
-              <Button 
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 text-lg"
-                disabled={!amount || parseFloat(amount) < 10}
-              >
-                <Icon name="Zap" size={20} className="mr-2" />
-                Обменять сейчас
-              </Button>
-
-              <p className="text-sm text-gray-400 text-center">
-                Минимальная сумма обмена: 10 USDT
-              </p>
-            </CardContent>
-          </Card>
+          <ExchangeForm />
         </div>
       </section>
 
       {/* Live Rates */}
       <section className="py-16 px-4 bg-gray-800/30">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Курсы криптовалют в режиме реального времени
+          <h3 className="text-3xl font-bold text-white text-center mb-12 flex items-center justify-center">
+            <Icon name="TrendingUp" size={32} className="mr-3 text-purple-400" />
+            {t('rates.title')}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {cryptoCurrencies.map(crypto => (
-              <Card key={crypto.code} className="bg-gray-800/50 border-gray-700">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {cryptoPrices.map(crypto => (
+              <Card key={crypto.symbol} className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-orange-400 mb-1">
-                    {crypto.code}
+                  <div className="text-2xl font-bold text-purple-400 mb-1">
+                    {crypto.symbol}
                   </div>
                   <div className="text-white font-semibold mb-1">
-                    ${crypto.rate.toLocaleString()}
+                    ${crypto.price.toLocaleString()}
                   </div>
                   <Badge 
-                    variant={crypto.change.startsWith('+') ? 'default' : 'destructive'}
-                    className={crypto.change.startsWith('+') ? 'bg-green-900/30 text-green-400' : ''}
+                    variant={crypto.change24h >= 0 ? 'default' : 'destructive'}
+                    className={crypto.change24h >= 0 ? 'bg-green-900/30 text-green-400' : 'bg-red-900/30 text-red-400'}
                   >
-                    {crypto.change}
+                    {crypto.change24h >= 0 ? '+' : ''}{crypto.change24h.toFixed(2)}%
                   </Badge>
                 </CardContent>
               </Card>
@@ -239,31 +144,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Recent Exchanges */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Последние обмены
-          </h3>
+      {/* Live Exchanges */}
+      <LiveExchanges />
+
+      {/* Special Offer */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-900/20 to-gold/20">
+        <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            {recentExchanges.map((exchange, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-lg p-4 mb-4 border border-gray-700">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                      <Icon name="User" size={16} className="text-white" />
-                    </div>
-                    <div>
-                      <div className="text-white font-semibold">{exchange.user}</div>
-                      <div className="text-gray-400 text-sm">
-                        {exchange.amount} {exchange.from} → {exchange.to}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-gray-400 text-sm">{exchange.time}</div>
-                </div>
+            <div className="bg-gradient-to-r from-purple-500/20 to-gold/20 rounded-2xl p-8 border border-purple-400/30">
+              <Icon name="Star" size={48} className="text-gold mx-auto mb-4" />
+              <h3 className="text-3xl font-bold text-white mb-4">
+                {t('specialOffer.title')}
+              </h3>
+              <p className="text-xl text-gray-300 mb-2">
+                {t('specialOffer.subtitle')}
+              </p>
+              <div className="text-4xl font-bold text-gold mb-4">
+                {t('specialOffer.profit19')}
               </div>
-            ))}
+              <Badge className="bg-gold/20 text-gold border-gold/30">
+                {t('specialOffer.oncePerMonth')}
+              </Badge>
+            </div>
           </div>
         </div>
       </section>
@@ -271,15 +173,16 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-16 px-4 bg-gray-800/30">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Отзывы клиентов
+          <h3 className="text-3xl font-bold text-white text-center mb-12 flex items-center justify-center">
+            <Icon name="MessageSquare" size={32} className="mr-3 text-purple-400" />
+            {t('testimonials.title')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-gray-800/50 border-gray-700">
+              <Card key={index} className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center mr-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
                       <Icon name="User" size={20} className="text-white" />
                     </div>
                     <div>
@@ -306,36 +209,37 @@ const Index = () => {
       {/* Referral Program */}
       <section className="py-16 px-4">
         <div className="container mx-auto text-center">
-          <h3 className="text-3xl font-bold text-white mb-8">
-            Реферальная программа
+          <h3 className="text-3xl font-bold text-white mb-8 flex items-center justify-center">
+            <Icon name="Users" size={32} className="mr-3 text-purple-400" />
+            {t('referralProgram.title')}
           </h3>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-400">
+              <Card className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border-purple-400">
                 <CardContent className="p-6 text-center">
-                  <Icon name="Users" size={48} className="text-orange-400 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Приводите друзей</h4>
-                  <p className="text-gray-300">Поделитесь своей реферальной ссылкой</p>
+                  <Icon name="UserPlus" size={48} className="text-purple-400 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">{t('referralProgram.bringFriends')}</h4>
+                  <p className="text-gray-300">Share your referral link</p>
                 </CardContent>
               </Card>
               <Card className="bg-gradient-to-br from-green-500/20 to-green-600/20 border-green-400">
                 <CardContent className="p-6 text-center">
                   <Icon name="Percent" size={48} className="text-green-400 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Получайте 25%</h4>
-                  <p className="text-gray-300">С каждого обмена вашего реферала</p>
+                  <h4 className="text-xl font-bold text-white mb-2">{t('referralProgram.earn25')}</h4>
+                  <p className="text-gray-300">From each referral exchange</p>
                 </CardContent>
               </Card>
-              <Card className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border-purple-400">
+              <Card className="bg-gradient-to-br from-gold/20 to-yellow-600/20 border-gold/50">
                 <CardContent className="p-6 text-center">
-                  <Icon name="TrendingUp" size={48} className="text-purple-400 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Без лимитов</h4>
-                  <p className="text-gray-300">Неограниченный доход от рефералов</p>
+                  <Icon name="Infinity" size={48} className="text-gold mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">{t('referralProgram.noLimits')}</h4>
+                  <p className="text-gray-300">Unlimited referral income</p>
                 </CardContent>
               </Card>
             </div>
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 px-8 text-lg">
+            <Button className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-3 px-8 text-lg">
               <Icon name="Link" size={20} className="mr-2" />
-              Получить реферальную ссылку
+              {t('referralProgram.getReferralLink')}
             </Button>
           </div>
         </div>
@@ -346,37 +250,48 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h4 className="text-white font-bold mb-4">CryptoExchange</h4>
-              <p className="text-gray-400">Надежный P2P обменник криптовалют с выгодными курсами</p>
+              <div className="flex items-center space-x-2 mb-4">
+                <img 
+                  src="/img/c53935cb-33ec-4c91-86de-de1d0ef36c53.jpg" 
+                  alt="CryptoExchange Pro" 
+                  className="h-8 w-8 rounded-full"
+                />
+                <h4 className="text-white font-bold">{t('title')}</h4>
+              </div>
+              <p className="text-gray-400">Reliable P2P cryptocurrency exchange with profitable rates</p>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-4">Услуги</h4>
+              <h4 className="text-white font-bold mb-4">{t('footer.services')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Обмен криптовалют</li>
-                <li>P2P торги</li>
-                <li>Реферальная программа</li>
+                <li>Cryptocurrency Exchange</li>
+                <li>P2P Trading</li>
+                <li>Referral Program</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-4">Поддержка</h4>
+              <h4 className="text-white font-bold mb-4">{t('footer.support')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Чат 24/7</li>
-                <li>Telegram</li>
-                <li>Email</li>
+                <li>24/7 Live Chat</li>
+                <li>Telegram Support</li>
+                <li>Email Support</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-4">Безопасность</h4>
+              <h4 className="text-white font-bold mb-4">{t('footer.security')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>SSL защита</li>
-                <li>Холодное хранение</li>
-                <li>2FA аутентификация</li>
+                <li>SSL Protection</li>
+                <li>Cold Storage</li>
+                <li>2FA Authentication</li>
               </ul>
             </div>
           </div>
           <Separator className="my-8 bg-gray-700" />
-          <div className="text-center text-gray-400">
-            <p>&copy; 2024 CryptoExchange. Все права защищены.</p>
+          <div className="text-center text-gray-400 flex items-center justify-center space-x-4">
+            <p>&copy; 2024 CryptoExchange Pro. {t('footer.rights')}</p>
+            <div className="flex space-x-2">
+              <Icon name="Shield" size={16} className="text-green-400" />
+              <span className="text-green-400 text-sm">Secure Platform</span>
+            </div>
           </div>
         </div>
       </footer>

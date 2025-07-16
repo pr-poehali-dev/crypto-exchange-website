@@ -1,0 +1,75 @@
+{
+  "title": "CryptoExchange Pro",
+  "subtitle": "Прибыльная криптовалютная биржа",
+  "hero": {
+    "title": "Обменивайте криптовалюты с прибылью +15%",
+    "description": "P2P обмен с лучшими курсами. Минимальная сумма от 10 USDT. Гарантированная безопасность и мгновенные переводы.",
+    "exchangeNow": "Обменять сейчас"
+  },
+  "exchangeForm": {
+    "title": "Обмен криптовалют",
+    "youSend": "Вы отправляете",
+    "youGet": "Вы получаете",
+    "exchangeRate": "Курс обмена",
+    "yourProfit": "Ваша прибыль",
+    "commission": "Комиссия",
+    "minAmount": "Минимальная сумма обмена: 10 USDT",
+    "walletAddress": "Адрес кошелька",
+    "sendToAdmin": "Отправить админу"
+  },
+  "rates": {
+    "title": "Курсы криптовалют в реальном времени",
+    "online": "Онлайн"
+  },
+  "recentExchanges": {
+    "title": "Последние обмены",
+    "minutesAgo": "минут назад",
+    "hoursAgo": "часов назад"
+  },
+  "testimonials": {
+    "title": "Отзывы клиентов",
+    "today": "Сегодня",
+    "yesterday": "Вчера",
+    "verified": "Проверено"
+  },
+  "referralProgram": {
+    "title": "Реферальная программа",
+    "bringFriends": "Приводите друзей",
+    "earn25": "Зарабатывайте 25%",
+    "noLimits": "Без лимитов",
+    "getReferralLink": "Получить реферальную ссылку"
+  },
+  "footer": {
+    "services": "Услуги",
+    "support": "Поддержка",
+    "security": "Безопасность",
+    "rights": "Все права защищены"
+  },
+  "notifications": {
+    "exchangeSuccess": "Обмен успешно завершен!",
+    "exchangeError": "Обмен не удался. Попробуйте еще раз.",
+    "copying": "Скопировано в буфер обмена",
+    "adminNotified": "Администратор уведомлен о вашем обмене"
+  },
+  "specialOffer": {
+    "title": "Специальное предложение",
+    "subtitle": "Для обменов свыше 10 000 USDT",
+    "profit19": "Гарантированная прибыль +19%",
+    "oncePerMonth": "Один раз в месяц"
+  },
+  "languages": {
+    "en": "English",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
+  }
+}
